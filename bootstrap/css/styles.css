@@ -1,0 +1,662 @@
+
+
+/*----------------------------------------General Styles----------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none; 
+}
+
+@font-face {
+    font-family:LemonMilk;
+    src: url(../../fonts/LemonMilk/LemonMilklight.otf);
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    color: black;
+}
+
+.centerText{
+    text-align: center;
+}
+
+.titleSizeLarge{
+    font-size: 38px;
+    font-weight: 600;
+}
+
+#topMargin{
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#topMarginM{
+    margin-top: 40px;
+}
+
+.topSpacing{
+    padding-top: 75px;
+}
+
+.bottomSpacingL{
+    padding-bottom: 60px;
+}
+
+/*<<<<<<<<<<<<<<<<<Nav Styles>>>>>>>>>>>>>>>>>*/
+
+.navTopRight {
+    position: absolute;
+    list-style: none;
+    text-align: right;
+    right: 40px;
+    top: 2%;
+    z-index: 10;
+    
+}
+
+.navTopRight li {
+    font-size: 20px;
+    display: inline-block;
+}
+
+#navBtn {
+    color: white;
+    /* display: block; */
+    padding: 14px;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+#navBtn a {
+    color: white;
+}
+
+#navBtn:hover {
+    -moz-text-shadow: 0 0 5px #fff;
+    -webkit-text-shadow: 0 0 5px #fff;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+#coloredNavBtn{
+    padding: 8px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#coloredNavBtn a{
+    color: black;
+
+}
+
+/*<<<<<<<<<<<<<<<<<footerStyles>>>>>>>>>>>>>>>>>*/
+
+.footerSection{
+    /* height: 110px; */
+    background-color: #444;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    
+}
+
+#footerLogo{
+    height: 110px;
+    padding-left: 30px;
+    background-image: url('../../img/footerLogo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#footerText{
+    padding-top: 17px;
+    padding-left: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#footerContact{
+    text-align: center;
+}
+
+.mediaIcon{
+    height: 25px;
+    margin: 0 10px;
+}
+
+#email{
+    padding-top: 6px;
+    font-size: 16px;
+}
+
+/*----------------------------------------Home Page Styles----------------------------------------*/
+
+/*<<<<<<<<<<<<<<<<<Intro Section Styles>>>>>>>>>>>>>>>>>*/
+
+#introSection {
+    height: 135vh;
+    background-image: url('../../img/video/background_Reworked_GIf.gif');
+    background-size: cover;
+    position: relative;
+    background-position: top center;
+    overflow: visible; /*changed from hidden*/
+    z-index: -2 ; /*set behind of parallaxTransition*/
+
+}
+
+#introLogo {
+    background-image: url('../../img/pgnLogoColor.svg');
+    height: 220px;
+    width: 100%;
+    position: relative;
+    top: 25%; /*canged from 50*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;       
+}
+
+#introDescription {
+   /* position: absolute;*/
+    top: 40%;
+    margin-top: 30px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 32px;
+}
+
+/*<<<<<<<<<<<<<<<<<Parallax Styles>>>>>>>>>>>>>>>>>*/
+
+#parallaxContainer{
+    position: relative; 
+    height: 3000px;
+    z-index: -1;
+    width: 100%;
+}
+
+.parallaxImg{
+    height: 1080px;
+    position: absolute;
+    bottom: 0;
+    background-repeat: repeat-x;
+    width: 100%;
+}
+
+.image1 {
+    background-image: url(../../img/parallax/skyline4_1920.png);        
+}
+
+.image2 {
+    background-image: url(../../img/parallax/skyline3_1920.png);       
+}
+
+.image3 {
+    background-image: url(../../img/parallax/skyline2_1920.png);        
+}
+
+.image4{
+    background-image: url(../../img/parallax/skyline1_1920.png);
+}
+
+#transitionGradient{
+    background-image: url(../../img/parallax/parallaxTransparentStar.png);
+    height: 3500px; 
+    width: 1920px;
+    position: absolute;
+    width: 100%;
+    top: 100vh; 
+    z-index: -1; /*set infront of background image and behind footer parallax*/     
+}
+
+.testspace{
+    background-color: black;
+    height: 2000px;
+}
+
+/*----------------------------------------Event Page Styles----------------------------------------*/
+
+.timeline {
+    position: relative;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    height: 600px;
+    background: blue;
+}       
+
+.event1
+ {
+  position: relative;
+}
+
+
+.event1Bubble {
+    position: absolute;
+    top: 50px;
+    left: -90px;
+    perspective: 1000px;
+}
+
+.event1Bubble:hover .flipper{
+    transform: rotateY(180deg);
+}
+
+.event1Bubble, .front, .back{
+    width: 200px;
+    height: 200px;
+}
+
+.flipper{
+    background-color: rgba(158, 158, 158, 0.1);
+    width: 200px;
+    height: 200px;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back{
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    border-color: #ff552b;
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.eventTime {
+    display: flex;
+    background: red;
+}
+
+.time {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    font-size: 8px;
+    margin-top: -3px;
+    margin-left: -5px;
+    color: #9E9E9E;
+}
+
+.eventImage{
+    width: 200px;
+    height: 200px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 12px;
+    border-style: solid;
+    border-color: #ff552b;
+   
+
+}
+
+.eventInfo{
+    text-align: center;
+}
+
+.eventTitle{
+    color: #ff6332;
+    font-size: 18px;
+}
+
+.eventDetail{
+    font-size: 7.5px;
+}
+
+/*----------------------------------------About Page Styles----------------------------------------*/
+
+.text-align{
+    text-align: center;
+}
+
+.aboutTitle{
+   font-weight: 600; 
+   padding-top: 10px;
+   font-size: 40px;
+   font-family:lemonMilk;
+   background-color: red;
+}
+
+.aboutDescription{
+    z-index: 1;
+    padding: 40px;
+    overflow: scroll;
+    /*background-color: grey;*/
+}
+
+#whoWeAre{
+    color: black;
+    font-size: 15px;
+
+}
+
+.verticalAlign {
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+  padding: 30px;
+}
+
+#historyText{
+  top: 320px;
+  padding: 30px ;
+}
+
+.imageCircle {
+    border-radius: 50%;
+}
+
+.whatWeDoContainer {
+    color: black;
+    text-align: left;
+    font-size: 19px;
+    background-color: grey;
+}
+
+#whatwedo h2 {
+    font-size: 32px;
+}
+
+.LRWhatWeDo_border2{
+    padding-top: 50px;
+    font-size: 24px;
+}
+
+#historyTitle{
+font-size: 100px;
+}
+
+#History{
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: right;
+}
+
+.HistoryImg{
+    background-image: url(../../img/gbmTele.jpg);
+    z-index: 1;
+    height: 250px;
+    width:100px;
+  /*  border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;*/
+    border-radius: 20px;
+    background-size:cover;
+}
+
+#History h2{
+    font-size: 32px;
+}
+
+.aboutInfoContainer{
+    background-size: cover;
+}
+
+
+.whatwedoImg{
+    background-image: url(../../img/ClubF.jpg);
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 250px;
+    width:400px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+.roundedEdge{
+    border-radius: 25px;
+   
+}       
+
+.HistoryTite{
+left: 80%;
+
+}
+
+
+.AboutFooter{
+    margin-top: 30px;
+    height: 200px;
+    background-color:grey;
+}
+
+#aboutTopImages{
+    height: 200px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+/*------aboutStaffStyles------*/
+
+#administrationContainer{
+    text-align: center;
+    color: black;
+
+}
+
+#administrationContainer h2{
+    
+    font-size: 40px;
+    margin-top: 40px;
+
+
+}
+
+#LemonMilk{
+   font-family:lemonMilk; 
+}
+
+.members{
+    padding-bottom: 40px;
+  
+
+}
+
+.topSpacing{
+    padding-top: 200px;
+  
+}
+
+/*----------------------------------------esport Page Styles----------------------------------------*/
+
+/*<<<<<<<<<<<<<<<<<General Styles>>>>>>>>>>>>>>>>>*/
+ul{
+    list-style: none;
+}
+
+.centerText{
+    text-align: center;
+}
+
+.titleSizeLarge{
+    font-size: 38px;
+    font-weight: 600;
+}
+
+#topMargin{
+    margin-top: 20px;
+}
+
+#topMarginM{
+    margin-top: 40px;
+}
+
+.topSpacing{
+    padding-top: 75px;
+}
+
+.bottomSpacing{
+    padding-bottom: 30px;
+}
+
+.bottomSpacingL{
+    padding-bottom: 60px;
+}
+
+/*<<<<<<<<<<<<<<<<<eSports Styles>>>>>>>>>>>>>>>>>*/
+
+#esportsContent{
+    background:url(../../img/blueglow_keyboard.jpg);
+    font-size: 40px;
+    background-size: cover;
+}
+
+#esportsTitle {
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 2px;
+    color: rgb(231,231,231);
+}
+
+#selectBg{
+    padding-top: 20px;
+    /*margin-bottom: 0px;*/
+    /*background-image: url('../../img/pgn_megaman_background.png');*/
+    background-image: url('../../img/pgn_megaman_background.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    background-blend-mode: 
+}
+
+.selectImg{
+    margin: 0;
+    padding: 2px;
+    width: 100%;
+    margin-bottom: 20px;
+    opacity: 1;
+}
+
+/*<<<<<<<<<<<<<<<<<Select Modal Styles>>>>>>>>>>>>>>>>>*/
+
+.modal-dialog {
+    padding-top: 10%;
+}
+
+.modal-content{
+    color: black;
+}
+
+.modalTitle{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+
+.modalquote{
+    font-size: 17px;
+    text-align: center;
+}
+
+.modalImg{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.modalStats{
+    padding-top: 10px;
+}
+
+.modalDescription{
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.statTitle{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(229, 72, 31);
+}
+
+.statItem{
+    font-size: 16px;
+}
+
+.statItem a{
+    color: black;
+}
+
+/*----------------------------------------Footer Styles----------------------------------------*/
+
+.modalIcon{
+    padding-top: 4px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+    background-position: center;
+}
+
+#modalFbIcon{
+    background-image: url('https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-256.png');
+}
+
+#modalTwitterIcon{
+    background-image: url('https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-256.png');
+}
+
+#modalDiscordIcon{
+    background-image: url('https://assets.materialup.com/uploads/acb74a41-283b-485f-9215-2a76c2103cc1/preview');
+}
+
+.footerSection{
+    background-color: #444;
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+}
+
+#footerLogo{
+    
+    height: 110px;
+    background-image: url('../../img/footerLogo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 200000000000000;
+}
+
+#footerText{
+    padding-top: 17px;
+    padding-left: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mediaIcon{
+    height: 25px;
+    margin: 0 10px;
+}
+
+#email{
+    padding-top: 6px;
+    font-size: 16px;
+}
+
